@@ -5,6 +5,12 @@
 
     <header class="post-content-header">
         <h1 class="post-content-title">{{title}}</h1>
+        <section class="post-meta">
+            <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+            {{#primary_tag}}
+                <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
+            {{/primary_tag}}
+        </section>
     </header>
 
     {{#if custom_excerpt}}
@@ -36,6 +42,14 @@
         If the post has more than one author, we load a specific template
         from includes/byline-multiple.hbs, otherwise, we just use the
         default byline. --}}
+
+        <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+
+        <!-- {{#primary_tag}}
+            <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
+        {{/primary_tag}} -->
+        in {{tags separator=", "}}
+        by {{authors}}
 
 
     </footer>

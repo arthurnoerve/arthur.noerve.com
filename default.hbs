@@ -1,5 +1,17 @@
 <!DOCTYPE html>
+
+{{#is "post"}}
+    {{#post}}
+        {{#has tag="norwegian"}}
+<html lang="no">
+        {{else}}
 <html lang="{{@site.lang}}">
+        {{/has}}
+    {{/post}}
+{{else}}
+    <html lang="{{@site.lang}}">
+{{/is}}
+
 <head>
 
     {{!-- Document Settings --}}
@@ -43,6 +55,7 @@
                 </div>
                 <div class="site-head-right">
                     <div class="social-links">
+                        <a href="https://instagram.com/arthurissim" title="Instagram" target="_blank" rel="noopener">Instagram</a>
                         {{#if @site.facebook}}
                         <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
                         {{/if}}
@@ -66,7 +79,7 @@
 
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-foot">
-            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; <a href="https://instagram.com/arthurissim" title="Instagram" target="_blank" rel="noopener">Instagram</a>
         </footer>
 
     </div>
