@@ -109,6 +109,7 @@ table {
 }
 img {
     max-width: 100%;
+    height: auto;
 }
 html {
     box-sizing: border-box;
@@ -288,7 +289,8 @@ hr {
     padding: 0;
     height: 1px;
     border: 0;
-    border-top: 1px solid color(var(--color-border) l(+10%));
+    border-top: 1px solid color(var(--color-border) l(+5%));
+    overflow: visible;
 }
 
 audio,
@@ -336,7 +338,7 @@ blockquote cite a {
 }
 
 a {
-    color: color(var(--color-primary) l(-5%));
+    color: var(--color-primary);
     text-decoration: none;
     transition: 0.4s ease;
 }

@@ -395,7 +395,6 @@ body {
 
 .post-feed {
     display: flex;
-    align-items: ;
     flex-wrap: wrap;
 }
 
@@ -586,7 +585,7 @@ body {
 .post-content-body blockquote {
     margin: 0 0 1.5em;
     padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    border-left: var(--color-primary) 3px solid;
 }
 
 .post-content-body blockquote p {
@@ -655,8 +654,8 @@ body {
     margin-left: -10px;
     width: 1px;
     height: 30px;
-    background: color(var(--color-border) l(+10%));
-    box-shadow: #fff 0 0 0 5px;
+    background: color(var(--color-border) l(+5%));
+    box-shadow: var(--color-bg) 0 0 0 5px;
     transform: rotate(45deg);
 }
 

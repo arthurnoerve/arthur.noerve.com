@@ -5,11 +5,11 @@
         {{#has tag="#norwegian"}}
 <html lang="no">
         {{else}}
-<html lang="{{@site.lang}}">
+<html lang="{{@site.locale}}">
         {{/has}}
     {{/post}}
-{{else}} 
-    <html lang="{{@site.lang}}">
+{{else}}
+    <html lang="{{@site.locale}}">
 {{/is}}
 
 <head>
@@ -129,6 +129,7 @@
             plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin()],
         });
         document.addEventListener('swup:contentReplaced', event => {
+            window.scrollTo(0, 0);
             initInfiniteScroll(window, document);
             $('body').removeClass('site-head-open');
         });
