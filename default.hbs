@@ -2,13 +2,13 @@
 
 {{#is "post"}}
     {{#post}}
-        {{#has tag="norwegian"}}
+        {{#has tag="#norwegian"}}
 <html lang="no">
         {{else}}
 <html lang="{{@site.lang}}">
         {{/has}}
     {{/post}}
-{{else}}
+{{else}} 
     <html lang="{{@site.lang}}">
 {{/is}}
 
